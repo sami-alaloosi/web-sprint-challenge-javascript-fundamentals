@@ -18,7 +18,17 @@ myFunction();
 
 // Explanation: 
 
+//Closure gives you access to an outer function’s scope from an inner function. Closure allows the nestedFunction() to access the internal variable. myFunction() scope is accesible to the nestedFunction().
+
+
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function summation(num){
+  if (num === 0){
+    return 0;
+  }
+  else return num + summation(num -1);
+  }
+console.log(summation(4)) // will return 10!
